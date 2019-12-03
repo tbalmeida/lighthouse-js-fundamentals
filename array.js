@@ -102,8 +102,24 @@ var numbers = [
   console.log (numbers);
   */
 
+/* Arrays - Ice cream!
+
  const iceCreamFlavours = ["chocolate", "vanilla", "cookies and cream", "rocky road", "strawberry"];
  console.log(iceCreamFlavours);
 
  iceCreamFlavours.push("root beer");
  console.log(iceCreamFlavours);
+ */
+
+ function concat( array1, array2 ){ 
+   array2.forEach(element => {
+     array1.push( element );
+   })
+   return array1;
+ }
+
+console.log(concat([ 1, 2, 3 ], [ 4, 5, 6 ]), "=?", [ 1, 2, 3, 4, 5, 6 ]);
+console.log(concat([ 0, 3, 1 ], [ 9, 7, 2 ]), "=?", [ 0, 3, 1, 9, 7, 2 ]);
+console.log(concat([], [ 9, 7, 2 ]), "=?", [ 9, 7, 2 ]);
+console.log(concat([ 5, 10 ], []), "=?", [ 5, 10 ]);
+
